@@ -6,12 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "postinstall": "node ./postinstall.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "whysopaul",
   "license": "ISC",
   "dependencies": {
     "@tinymce/tinymce-react": "^4.3.2",
+    "fs-extra": "^11.2.0",
     "html-react-parser": "^5.0.7",
     "next": "^14.0.4",
     "react": "^18.2.0",
