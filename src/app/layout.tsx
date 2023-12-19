@@ -1,7 +1,8 @@
-import Search from '@/components/Search';
+import Search, { MAGNIFYING_GLASS } from '@/components/Search';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import Link from 'next/link';
+import { Suspense } from 'react';
 import '../css/global.css';
 import '../css/layout.css';
 
@@ -32,7 +33,9 @@ export default function RootLayout({
                                 <li><Link href={'/'}>Контакты</Link></li>
                             </ul>
                         </nav>
-                        <Search />
+                        <Suspense fallback={<button>{MAGNIFYING_GLASS}</button>}>
+                            <Search />
+                        </Suspense>
                     </div>
                 </header>
                 {children}
