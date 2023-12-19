@@ -23,7 +23,10 @@ export default function CourseEdit() {
 
     const onSave = () => {
         if (editorRef.current) {
-            console.log(editorRef.current.getContent())
+            const editorContent = editorRef.current.getContent()
+
+            console.log('Заголовок:', editorContent.slice(editorContent.indexOf('<h1>') + 4, editorContent.indexOf('</h1>')))
+            console.log(editorContent)
         }
     }
 

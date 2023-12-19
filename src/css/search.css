@@ -1,0 +1,27 @@
+.search-results-heading {
+    margin-bottom: 32px;
+}
+
+.search-results-item {
+    padding: 10px;
+    margin-bottom: 16px;
+    background: var(--color-lightgray);
+    border-radius: 10px;
+}
+
+.search-results-item>h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.search-results-item>h2>a {
+    color: var(--color-blue);
+}
+
+.search-results-item>h2>a:hover {
+    text-decoration: none;
+}
+
+.search-results-item>p {
+    color: var(--color-gray);
+}
