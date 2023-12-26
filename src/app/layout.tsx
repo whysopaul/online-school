@@ -1,3 +1,4 @@
+import ScrollToTop, { ANGLE_UP } from '@/components/ScrollToTop';
 import Search, { MAGNIFYING_GLASS } from '@/components/Search';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
@@ -19,7 +20,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en">
+        <html lang="ru">
             <body className={montserrat.className}>
                 <header className='header'>
                     <div className='header-container'>
@@ -39,6 +40,9 @@ export default function RootLayout({
                     </div>
                 </header>
                 {children}
+                <Suspense fallback={<button>{ANGLE_UP}</button>}>
+                    <ScrollToTop />
+                </Suspense>
                 <footer className='footer'>
                     <div className='footer-container'>
                         <div className='footer-copyright'>
