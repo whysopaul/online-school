@@ -31,6 +31,6 @@ export default function ScrollToTop() {
     }, [, bodyTop, screenHeight])
 
     return <>
-        <button className='scroll-to-top-button' style={{ opacity: -bodyTop > screenHeight ? 1 : 0 }} onClick={() => window?.scrollTo({ top: 0, behavior: 'smooth' })}/* ref={scrollButtonRef} */>{ANGLE_UP}</button>
+        <button className='scroll-to-top-button' style={-bodyTop > screenHeight ? { opacity: 1, visibility: 'visible' } : { opacity: 0, visibility: 'hidden' }} onClick={() => window?.scrollTo({ top: 0, behavior: 'smooth' })}/* ref={scrollButtonRef} */>{ANGLE_UP}</button>
     </>
 }
